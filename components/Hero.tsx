@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowDown } from "lucide-react";
 
 export function Hero() {
@@ -7,9 +8,14 @@ export function Hero() {
         <div className="flex flex-col md:flex-row items-center md:items-start gap-16">
           {/* Headshot */}
           <div className="shrink-0">
-            <div className="w-40 h-40 md:w-48 md:h-48 rounded-2xl bg-[var(--card)] border border-[var(--border)] flex items-center justify-center overflow-hidden shadow-sm">
-              {/* Replace with: <Image src="/headshot.jpg" alt="Guanyu Qu" fill className="object-cover" /> */}
-              <span className="text-6xl select-none">👤</span>
+            <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-2xl overflow-hidden shadow-md border border-[var(--border)]">
+              <Image
+                src="/headshot.jpg"
+                alt="Guanyu Qu"
+                fill
+                className="object-cover object-top"
+                priority
+              />
             </div>
           </div>
 
